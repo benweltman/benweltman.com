@@ -1,7 +1,5 @@
 # benweltman.com
-
 ![repository-open-graph-template](https://github.com/benweltman/benweltman.com/assets/2255246/d70311b0-3235-4e8f-9e34-adaf862e034e)
-
 My Personal Website is a simple html site to promote my personal portfolio, freelance work, overall experience and knowledge as a front end web developer.
 
 The site is built using bootstrap v5, with plain html, sass (css), as well as some javascript and jquery. 
