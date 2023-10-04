@@ -1,0 +1,41 @@
+// Overrides
+
+:root {
+	--bs-primary: var(--primary) !important;
+	--bs-secondary: var(--secondary) !important;
+	--bs-primary-text: var(--primary) !important;
+	--bs-secondary-text: var(--secondary) !important;
+	--bs-secondary-bg: var(--secondary) !important;
+	--bs-border-color: var(--primary) !important;
+	--bs-border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+	--bs-primary-rgb: var(--primary) !important;
+	--bs-secondary-rgb: var(--secondary) !important;
+}
+
+.border-primary {
+	border-color: var(--primary) !important;
+}
+
+.btn-primary {
+	background-color: var(--primary) !important;
+	--bs-btn-border-color: var(--primary) !important;
+}
+
+.btn-outline-primary {
+	border-color: var(--primary) !important;
+	color: var(--primary) !important;
+}
+
+.nav-link {
+	--bs-nav-link-color: var(--primary);
+}
+
+.progress-bar {
+	--bs-progress-bar-color: var(--primary);
+	background-color: var(--primary);
+	color: white;
+}
+
+.text-primary {
+	color: var(--primary) !important;
+}

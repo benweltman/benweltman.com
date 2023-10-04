@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+
+<!-- Title & Metadata
+================================================= -->
+<meta charset="utf-8">
+<title>Ben Weltman - About</title>
+<meta name="description"        content="Front end developer and consultant for websites, web apps and web related projects">
+<meta name="keywords"           content="front end developer, web developer, web design, web consultant, ux, ui, html, css, javascript, js">
+<meta name="author"             content="Ben Weltman">
+
+<!-- Mobile Specific Metas
+================================================= -->
+<meta name="viewport"           content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- Other Metadata
+================================================= -->
+<meta property="og:title"        content="Ben Weltman &bull; Front End Developer &amp; Consultant">
+<meta property="og:type"         content="Website">
+<meta property="og:url"          content="http://benweltman.com">
+<meta property="og:image"        content="http://benweltman.com/img/share-image_bg.jpg">
+<meta property="og:description"  content="Front end developer and consultant for websites, web apps and web related projects.">
+<meta property="og:site_name"    content="Ben Weltman &bull; Front End Developer &amp; Consultant">
+
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:creator"     content="@benweltman">
+<meta name="twitter:url"         content="http://benweltman.com">
+<meta name="twitter:title"       content="Ben Weltman &bull; Front End Developer &amp; Consultant">
+<meta name="twitter:description" content="Front end developer and consultant for websites, web apps and web related projects.">
+<meta name="twitter:image"       content="http://benweltman.com/img/share-image_bg.jpg">
+
+<!-- CSS
+================================================= -->
+<link rel="stylesheet" href="css/bw-core.css">
+
+<!-- Fonts
+================================================= -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<!-- Favicons
+=================================================-->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico">
+
+<!-- JS
+=============================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/bw-main.js"></script>
+
+<!-- Dynamic Date - Year - for Copyright (JS)
+================================================= -->
+<script> 
+    function SetYear() {
+        var thisDate=new Date();
+        var thisYear=thisDate.getFullYear();
+        document.getElementById('copyDate').innerHTML="&copy; "+thisYear;
+    }
+</script>
+
+<!-- "Do not seek to change what has come before. Seek to create that which has not." — DAVID AIREY - Quotesondesign.com -->	
+
+</head>
+<body class="bg-dark about">
+
+<!-- Primary Page Layout
+================================================== -->
+    
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-dark border-bottom border-dark sticky-top">
+
+  <nav class="container flex-wrap flex-md-nowrap" aria-label="Main navigation">
+
+    <a href="index.html" aria-label="Bootstrap" class="d-flex align-items-center navbar-brand rounded-2 header-link">
+        <img src="img/bw-logo-lg.png" alt="ben weltman logo" class="header-logo" style="max-width: 50px;" />
+        <span class="d-inline font-24 me-2">Ben Weltman</span>
+    </a>
+
+    <button class="btn btn-dark navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation" onclick="menuSwitcher()">
+        <svg class="menu-icon d-block" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 0 24 24" width="32px" fill="#fff">
+            <path d="M0 0h24v24H0V0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+        <svg class="close-icon d-none" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 0 24 24" width="32px" fill="#fff">
+            <path d="M0 0h24v24H0V0z" fill="none"></path>
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path>
+        </svg>
+    </button>
+
+    <div class="navbar-collapse collapse" id="bdNavbar">
+      <ul class="navbar-nav flex-row flex-wrap mt-4 mt-md-0 ms-md-auto gap-md-2 justify-content-between align-items-center">
+        <li class="nav-item lh-base">
+          <a class="nav-link font-20 p-2 rounded-2 text-center w-100" aria-current="true" href="index.html">Home</a>
+        </li>
+        <li class="nav-item lh-base">
+          <a class="nav-link font-20 p-2 rounded-2 text-center w-100" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item lh-base">
+          <a class="nav-link font-20 p-2 rounded-2 text-center w-100 active" href="about.html">About</a>
+        </li>
+        <li class="nav-item lh-base">            
+            <a class="btn btn-dark p-2 switch" href="#" onclick="modeSwitcher()">
+                <span class="material-icons font-24 align-text-top switch-icon" aria-hidden="true">light_mode</span>
+            </a>
+        </li>
+        <li class="nav-item lh-base">
+            <div class="dropdown">
+                <a class="btn btn-dark p-2" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="material-icons font-24 align-text-top" aria-hidden="true">palette</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end p-2 position-absolute" aria-labelledby="dropdownMenuButton1">
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="material-icons font-24 text-primary me-1">edit</span>
+                        <span class="font-16">Change Colour</span>
+                    </div><!-- end d-flex -->
+                    <div class="bg-light rounded-2 p-2">
+                      <div class="col-12 mb-1">
+                        <div class="d-block w-100">
+                          <div class="input-group colour-switch-input">
+                            <input type="color" id="primary" class="form-control lh-lg" onchange="getPrimaryColor()"/>
+                            <input type="text" id="prival" class="form-control font-11 lh-sm"  value="#5aa1ad"/>
+                          </div><!-- end input-group -->
+                        </div><!-- end d-block -->
+                      </div><!-- end col-12 -->                
+                    </div><!-- end bg-light -->
+                </div><!-- end dropdown menu -->
+            </div><!-- end dropdown -->
+        </li>
+      </ul>
+    </div><!-- end navbar -->
+
+  </nav>
+
+</header>
+
+<main class="bg-dark cv-accordion">
+    
+    <div class="container pt-2">
+
+        <div class="row my-4">
+            
+            <div class="col-12">                
+                <h2>My Story</h2>
+            </div><!-- end col-12 -->
+
+        </div><!-- end row -->
+
+        <div class="row d-flex justify-content-lg-start justify-content-center">
+
+            <div class="col-lg-3 col-6 mb-lg-0 mb-4">                
+                <img src="img/me.jpg" alt="picture of ben weltman" class="border border-2 border-primary rounded-2 w-100"/>
+            </div><!-- end col-lg-3 -->
+            
+            <div class="col-lg-9 col-12 text-justify px-4 px-sm-0">
+                <p>
+                    Since 2010 I've been working as a front end developer &amp; consultant providing web development, design, support &amp; maintenance, amongst other services, for a variety of clients in different industries around the world.
+                </p>
+                <p>
+                    In 2012 I began working full time as web developer for dermalogica uk, then 6 and a half years later (in 2019) I was offered the opportunity to join intelliflo, a fantastic financial services software development (SaaS) company. I've learnt a lot about building websites in that time, and even more so in the last few years - as a developer, there's nothing quite like working for a proper software development company. Working as a developer is a never ending learning experience!
+                </p>
+                <p>
+                    Some of the projects I've worked on throughout my career have given me experience working on large scale websites, web services, APIs and applications, including hybrid and progressive web apps. Whilst I have experience with full stack development, it's not my speciality nor my passion, I love front end development! I find it fascinating and thoroughly enjoy responsive web design, creating SASS loops, learning the latest css specifications, figuring out how to change a site's colours with javascript and so on.
+                </p>
+                <p>
+                    I'm always interested in new projects and ideas, so if you're looking for a new website, or just some advice please <a href="mailto:ben@benweltman.com?Subject=Website Contact">contact me</a>.
+                </p>     
+            </div><!-- end col-lg-9 -->
+
+        </div><!-- end row -->
+
+        <div class="row my-4">
+
+            <div class="col-12">
+                
+                <h2 class="">My CV</h2>
+
+            </div><!-- end col-12 -->
+            
+        </div><!-- end row -->
+
+        <div class="row">
+
+            <div class="col-12">                
+
+                <button class="btn d-flex align-items-center font-18 p-2 text-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    Profile
+                    <i class="material-icons font-24 ms-auto" aria-hidden="true">expand_more</i>
+                </button>
+
+                <hr class="w-100 border-bottom border-primary" />            
+                
+                <div class="collapse show px-1" id="collapse1">
+                     <ul>
+                        <li>Front end developer with proven track record of successful web projects</li>
+                        <li>10+ years of experience working in commercial agile development environments</li>
+                        <li>4+ years of experience working for a Fintech SaaS company with over 200 developers globally</li>
+                        <li>Experience working on largescale codebases, repos, and websites with 150,000+ users</li>
+                        <li>Skilled in responsive web design, front end technologies and general UX principles</li>
+                        <li>Highly motivated and results driven</li>
+                        <li>Excellent eye for detail</li>
+                        <li>Great team player and collaborator</li>                    
+                    </ul>
+                </div>
+
+            </div><!-- end col-12 -->
+            
+        </div><!-- end row -->
+
+        <div class="row">
+
+            <div class="col-12">                
+
+                <button class="btn d-flex align-items-center font-18 p-2 text-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                  Experience
+                  <i class="material-icons font-24 ms-auto" aria-hidden="true">expand_more</i>
+                </button>
+
+                <hr class="w-100 border-bottom border-primary" /> 
+
+                <div class="collapse px-3" id="collapse2">
+                    <p class="text-primary text-justify"><b>January 2019 – Present</b> { Front End Developer / UX Engineer @ Intelliflo Ltd }</p>
+                    <p class="text-justify">
+                        Main responsibilities: front-end development, user experience design and engineering for Intelliflo’s award-winning financial SaaS products, which are tailored to the real needs of advice professionals. The websites are mainly .net, MVC based using C# with Razor, HTML, CSS, SCSS, SASS, Bootstrap, JavaScript, Git (and GitHub), in an Agile web development environment. With some exposure to JavaScript frameworks like React, Vue, Angular and Node. All hosted on AWS (Amazon Web Services).
+                    </p>
+                    <p>Some of those projects included:</p>
+                        <ul class="text-justify">
+                            <li>
+                                Redesign of the main intelliflo office website. Largescale project that took more than a year to complete; the site has over 365 pages and 150,000+ users around the world (UK, US, Australia & Canada). The redesign increased customer engagement and satisfaction levels, as well as helping the company to attract new customers including the massive US based company State Farm.
+                            </li>
+                            <li>Redesign of the personal finance portfolio website, general improvements for responsiveness, cross browser compatibility and accessibility.</li>
+                            <li>
+                                Creation of the intelliflo office style guide; a design resource for the intelliflo developers to use to help ensure consistency in the intelliflo UI & UX, as well as providing guidance and component-based designs.
+                            </li>
+                            <li>Bootstrap version updates from 3 to 4, and again from 4 to 5, for intelliflo office and the personal finance portal.</li>
+                            <li>Establishment of front-end development processes to better collaborate with developers and other departments.</li>
+                            <li>Collaboration with the Software Architects to improve front end technologies.</li>
+                            <li>Improvement of the SASS/ SCSS for intelliflo office.</li>
+                        </ul>
+                    </p>
+
+                    <p class="text-primary text-justify"><b>August 2012 – December 2018</b> { Web Developer @ Dermalogica UK Ltd }</p>
+                    <p class="text-justify">
+                        Main responsibilities: front-end development of new web projects to improve dermalogica’s online websites and services for the UK, Ireland, Germany, Canada and Australia. Secondary responsibilities; maintenance, support, training and improvement of any new or existing websites and services.
+                    </p>
+                    <p>Some of those projects included:</p>
+                        <ul class="text-justify">
+                            <li>
+                                We Are Dermalogica; a new customer facing site built to generate new business leads and allow businesses to inquire about the companies services. Improved new business lead and generation by 75%. Fully responsive, built using asp.net, html5, css3, js and jQuery. The site was also replicated for Australia, Canada, France & Germany.
+                            </li>
+                            <li>
+                                Dermalogica Connect; a comprehensive portal website that linked all of Dermalogica's web services into one place. Responsive, accessible and user friendly Connect was built with Squiz Matrix, an enterprise level CMS for the back end, with html5, css3, JS and jQuery for the front end. Connect also featured a free Website Builder that built responsive, modern websites in under 15 minutes. Increased dermalogica’s web presence and provided websites for 1000s of customers. Also improved website traffic for all of dermalogica’s sites as a result.
+                            </li>
+                            <li>
+                                The Dermalogica Education System; a bespoke, responsive web-based booking system for the Education department. Built entirely in house using ASP.NET, MVC, C# with razor, HTML5, CSS3, JS and jQuery, using a custom built web API, and an MSQL database all hosted with Amazon Web Services.
+                            </li>
+                        </ul>
+                    </p>
+
+                    <p class="text-primary"><b>August 2010 – Present</b> { Web Developer & Consultant @ Freelance }</p>
+                    <p class="text-justify">
+                        Freelance consultant providing website design and development for a broad range of clients; from musicians and life coaches to filmmakers and training companies. Key skills; requirements gathering, research, development, system development life cycle, design, and development for the web. Generally, sites comprised of HTML, CSS, some JavaScript and then some exposure to PHP through WordPress and other content management systems. As well as quality assurance and user acceptance testing, support, and maintenance.
+                    </p>
+                </div>  
+
+            </div><!-- end col-12 -->
+            
+        </div><!-- end row -->
+
+        <div class="row">
+
+            <div class="col-12">                
+
+              <button class="btn d-flex align-items-center font-18 p-2 text-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                Skills
+                <i class="material-icons font-24 ms-auto" aria-hidden="true">expand_more</i>
+              </button>
+
+              <hr class="w-100 border-bottom border-primary" /> 
+
+                <div class="collapse px-3" id="collapse3">
+                    <p><span class="text-primary">Main Languages &amp; Frameworks:</span> HTML, CSS, SASS, SCSS, JS, JQuery, Git, Bootstrap</p>
+                    <p><span class="text-primary">Other Experience:</span> C#, Razor, .NET, SQL, WordPress, React, Vue, Node</p>                    
+                    <p><span class="text-primary">Paradigms &amp; Design Patterns:</span> Responsive Web Design (RWD), Block Element Modifier (BEM), User Experience (UX), Object Orientated Programming (OOP), Model-View-Controller (MVC)</p>
+                    <p><span class="text-primary">Tools:</span> Github, Visual Studio, Sublime, Koala, Prepos, SQL Server Management Studio, TortoiseGit, Photoshop, Figma, FileZilla, Docker, Jira, AWS, Azure Dev Ops (TFS)</p>                    
+                </div>
+
+            </div><!-- end col-12 -->
+            
+        </div><!-- end row -->
+
+        <div class="row">
+
+            <div class="col-12">                
+
+                <button class="btn d-flex align-items-center font-18 p-2 text-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    Education
+                    <i class="material-icons font-24 ms-auto" aria-hidden="true">expand_more</i>
+                </button>
+
+                <hr class="w-100 border-bottom border-primary" /> 
+
+                <div class="collapse px-3" id="collapse4">
+                    <p class="text-primary">London South Bank University – 2007 – 2010</p>
+                    <p>Internet Computing BSc – Graduated with First Class Honours</p>
+                    <p class="text-primary">Esher College – 2002 – 2004</p>
+                    <p>A-Level - Information Technology<br />AS-Level - Information Technology, Biology, Chemistry & General Studies</p>
+                    <p class="text-primary">Wimbledon College – 1999 – 2002</p>
+                    <p>GCSEs - Maths, Science (Double Award), English, Information Technology, Design Technology, French, Geography, Physical Education & Religious Education</p>
+                </div>
+
+            </div><!-- end col-12 -->
+            
+        </div><!-- end row -->
+
+        <div class="row">
+
+            <div class="col-12">                
+
+                <button class="btn d-flex align-items-center font-18 p-2 text-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    Interests
+                    <i class="material-icons font-24 ms-auto" aria-hidden="true">expand_more</i>
+                </button>
+
+                <hr class="w-100 border-bottom border-primary" /> 
+
+                <div class="collapse px-3" id="collapse5">
+                    <p class="text-justify">Music, film, games, technology, pc hardware, Warhammer 40,000, Japanese culture & history, anime, sci-fi, philosophy, science, martial arts, gymnastics, football, golf, tennis.</p>
+                </div>
+
+            </div><!-- end col-12 -->
+            
+        </div><!-- end row -->
+
+        <div class="row">
+
+            <div class="col-12">                
+
+                <button class="btn d-flex align-items-center font-18 p-2 text-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                    Location
+                    <i class="material-icons font-24 ms-auto" aria-hidden="true">expand_more</i>
+                </button>
+
+                <hr class="w-100 border-bottom border-primary" /> 
+
+                <div class="collapse px-3" id="collapse6">
+                    <p>Based in Poole, Dorset. (Mainly interested in remote working opportunities).</p>
+                </div>  
+
+            </div><!-- end col-12 -->
+            
+        </div><!-- end row -->
+
+        <div class="row">
+
+            <div class="col-12">                
+
+                <button class="btn d-flex align-items-center font-18 p-2 text-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                    References
+                    <i class="material-icons font-24 ms-auto" aria-hidden="true">expand_more</i>
+                </button>
+
+                <hr class="w-100 border-bottom border-primary" /> 
+
+                <div class="collapse p-2" id="collapse7">
+                    <p>Available on request.</p>
+                </div> 
+
+            </div><!-- end col-12 -->
+            
+        </div><!-- end row -->
+
+        <div class="row">
+            <p class="px-4 pt-2">If you would like a pdf or word doc of my CV, or to discuss an opportunity, please <a href="mailto:ben@benweltman.com?Subject=Website Contact">get in touch</a>.</p>
+        </div>
+
+    </div><!-- end container -->
+
+</main>
+
+<footer class="my-2">
+
+    <div class="container">
+
+        <hr class="w-100 border-primary">
+
+        <div class="row">
+
+            <ul class="nav d-flex align-items-center justify-content-center">
+                <li class="nav-item">
+                    <a href="https://uk.linkedin.com/in/bsweltman" class="nav-link rounded-2 text-center w-100">
+                        <i class="font-32 fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/benweltman" class="nav-link rounded-2 text-center w-100">
+                        <i class="font-32 fa fa-github"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://codepen.io/benweltman" class="nav-link rounded-2 text-center w-100">
+                        <i class="font-32 fa fa-codepen"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="d-flex justify-content-center my-2">
+                <a href="mailto:ben@benweltman.com?Subject=Website Contact" class="rounded-2 p-2">ben@benweltman.com</a>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <span><span id="copyDate"> </span> Ben Weltman</span>
+            </div>
+
+        </div><!-- end row -->
+
+    </div><!-- end div -->
+
+</footer>
+
+<!-- JS
+=============================================== -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71259489-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-71259489-1');
+
+    // Dynamic date
+    window.onload= function() {
+        //alert ("onload function");
+        SetYear();
+    }
+
+    // Light & Dark Mode + Colour Changes
+
+    $(document).ready(function () {
+        var light = localStorage.getItem('light');
+
+        if (light === 'True') {
+          localStorage.setItem('light', 'False');
+          modeSwitcher();
+        } else {
+          localStorage.setItem('light', 'True');
+          modeSwitcher();
+        }
+
+        var primary = localStorage.getItem('primary');
+
+        if (primary === null) {
+          $('#primary').val('#5aa1ad');
+          localStorage.setItem('primary', '#5aa1ad');
+          getPrimaryColor();
+        } else {
+          $('#primary').val(primary);
+          $('#prival').val(primary);
+        }    
+
+        // Primary Colour input changes
+        $('#prival').on('change', function () {
+          if ($('#prival').val() == '')
+          {
+            $('#primary').val('#5aa1ad');
+            $('#prival').val('#5aa1ad');
+            localStorage.setItem('primary', '#5aa1ad');
+            getPrimaryColor();
+          } else {
+            $('#primary').val($(this).val());
+            localStorage.setItem('primary', $(this).val());
+            getPrimaryColor();
+          }
+        });
+        $('#primary').on('change', function () {
+          $('#prival').val($(this).val());
+          localStorage.setItem('primary', $(this).val());
+        });
+
+        getPrimaryColor();
+    });
+</script>
+
+<!-- End Document
+================================================== -->
+
+<!-- "Have no fear of perfection – you’ll never reach it" — SALVADOR DALI - From Quotesondesign.com -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+// BW Utilities
+
+// Font sizes 
+@for $i from 0 through 100 {
+	.font-#{$i} {
+		font-size: #{$i / 16}rem !important;
+	}
+}
+
+// Opacities
+
+@for $i from 0 through 09 {
+	.opacity-#{$i} {
+		opacity: #{$i / 10} !important;
+	}
+}
+
+// Z-Indexes
+
+@for $i from 0 through 09 {
+	.z-#{$i} {
+		z-index: #{$i};
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.fw-500 {
+	font-weight: 500;
+}

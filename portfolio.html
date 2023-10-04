@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+
+<!-- Title & Metadata
+================================================= -->
+<meta charset="utf-8">
+<title>Ben Weltman - Portfolio</title>
+<meta name="description"        content="Front end developer and consultant for websites, web apps and web related projects">
+<meta name="keywords"           content="front end developer, web developer, web design, web consultant, ux, ui, html, css, javascript, js">
+<meta name="author"             content="Ben Weltman">
+
+<!-- Mobile Specific Metas
+================================================= -->
+<meta name="viewport"           content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- Other Metadata
+================================================= -->
+<meta property="og:title"        content="Ben Weltman &bull; Front End Developer &amp; Consultant">
+<meta property="og:type"         content="Website">
+<meta property="og:url"          content="http://benweltman.com">
+<meta property="og:image"        content="http://benweltman.com/img/share-image_bg.jpg">
+<meta property="og:description"  content="Front end developer and consultant for websites, web apps and web related projects.">
+<meta property="og:site_name"    content="Ben Weltman &bull; Front End Developer &amp; Consultant">
+
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:creator"     content="@benweltman">
+<meta name="twitter:url"         content="http://benweltman.com">
+<meta name="twitter:title"       content="Ben Weltman &bull; Front End Developer &amp; Consultant">
+<meta name="twitter:description" content="Front end developer and consultant for websites, web apps and web related projects.">
+<meta name="twitter:image"       content="http://benweltman.com/img/share-image_bg.jpg">
+
+<!-- CSS
+================================================= -->
+<link rel="stylesheet" href="css/bw-core.css">
+
+<!-- Fonts
+================================================= -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<!-- Favicons
+=================================================-->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico">
+
+<!-- JS
+=============================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/bw-main.js"></script>
+
+<!-- Dynamic Date - Year - for Copyright (JS)
+================================================= -->
+<script> 
+    function SetYear() {
+        var thisDate=new Date();
+        var thisYear=thisDate.getFullYear();
+        document.getElementById('copyDate').innerHTML="&copy; "+thisYear;
+    }
+</script>
+
+<!-- "Do not seek to change what has come before. Seek to create that which has not." — DAVID AIREY - Quotesondesign.com -->	
+
+</head>
+<body class="bg-dark portfolio">
+
+<!-- Primary Page Layout
+================================================== -->
+    
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-dark border-bottom border-dark sticky-top">
+
+  <nav class="container flex-wrap flex-md-nowrap" aria-label="Main navigation">
+
+    <a href="index.html" aria-label="Bootstrap" class="d-flex align-items-center navbar-brand rounded-2 header-link">
+        <img src="img/bw-logo-lg.png" alt="ben weltman logo" class="header-logo" style="max-width: 50px;" />
+        <span class="d-inline font-24 me-2">Ben Weltman</span>
+    </a>
+
+    <button class="btn btn-dark navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation" onclick="menuSwitcher()">
+        <svg class="menu-icon d-block" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 0 24 24" width="32px" fill="#fff">
+            <path d="M0 0h24v24H0V0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+        <svg class="close-icon d-none" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 0 24 24" width="32px" fill="#fff">
+            <path d="M0 0h24v24H0V0z" fill="none"></path>
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path>
+        </svg>
+    </button>
+
+    <div class="navbar-collapse collapse" id="bdNavbar">
+      <ul class="navbar-nav flex-row flex-wrap mt-4 mt-md-0 ms-md-auto gap-md-2 justify-content-between align-items-center">
+        <li class="nav-item lh-base">
+          <a class="nav-link font-20 p-2 rounded-2 text-center w-100" aria-current="true" href="index.html">Home</a>
+        </li>
+        <li class="nav-item lh-base">
+          <a class="nav-link font-20 p-2 rounded-2 text-center w-100 active" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item lh-base">
+          <a class="nav-link font-20 p-2 rounded-2 text-center w-100" href="about.html">About</a>
+        </li>
+        <li class="nav-item lh-base">            
+            <a class="btn btn-dark p-2 switch" href="#" onclick="modeSwitcher()">
+                <span class="material-icons font-24 align-text-top switch-icon" aria-hidden="true">light_mode</span>
+            </a>
+        </li>
+        <li class="nav-item lh-base">
+            <div class="dropdown">
+                <a class="btn btn-dark p-2" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="material-icons font-24 align-text-top" aria-hidden="true">palette</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end p-2 position-absolute" aria-labelledby="dropdownMenuButton1">
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="material-icons font-24 text-primary me-1">edit</span>
+                        <span class="font-16">Change Colour</span>
+                    </div><!-- end d-flex -->
+                    <div class="bg-light rounded-2 p-2">
+                      <div class="col-12 mb-1">
+                        <div class="d-block w-100">
+                          <div class="input-group colour-switch-input">
+                            <input type="color" id="primary" class="form-control lh-lg" onchange="getPrimaryColor()"/>
+                            <input type="text" id="prival" class="form-control font-11 lh-sm"  value="#5aa1ad"/>
+                          </div><!-- end input-group -->
+                        </div><!-- end d-block -->
+                      </div><!-- end col-12 -->                
+                    </div><!-- end bg-light -->
+                </div><!-- end dropdown menu -->
+            </div><!-- end dropdown -->
+        </li>
+      </ul>
+    </div><!-- end navbar -->
+
+  </nav>
+
+</header>
+
+<main class="bg-dark">
+    
+    <div class="container pt-2">
+
+        <div class="row my-4">
+            
+            <div class="col-12">                
+                <h2>My Work</h2>
+            </div><!-- end col-12 -->
+
+        </div><!-- end row -->
+
+        <div class="row my-4">
+            
+            <div class="col-12">                
+                <p class="px-1">All of the websites I design, build and work on are fully responsive, primarily using html, css, sass, js &amp; jquery. Sometimes clients request a content management system, in which case I tend to use wordpress. Some of the sites I've worked on over the years have stood out as great projects to show case, including intelliflo office, which is what I work on full time. It has over 350 pages, more than 150,000 users, a team of over 200 developers and of course my UI team colleagues whom I collaborate with to design, build and improve all aspects of the UX.</p>
+            </div><!-- end col-12 -->
+
+        </div><!-- end row -->
+
+        <div class="row mb-4">
+            <div class="d-flex gap-2 button-group filter-button-group p-x3 py-1">
+                <button class="btn btn-primary" data-filter="*">Show All</button>
+                <button class="btn btn-outline-primary" data-filter=".html">HTML</button>
+                <button class="btn btn-outline-primary" data-filter=".sass">SASS</button>
+                <button class="btn btn-outline-primary" data-filter=".cSharp">C#</button>
+                <button class="btn btn-outline-primary" data-filter=".net">.NET</button>
+                <button class="btn btn-outline-primary" data-filter=".wordpress">Wordpress</button>             
+            </div>    
+        </div>
+
+        <div class="grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>                        
+
+            <div class="row mb-4">
+
+                <div class="col-md-4 pb-2 grid-item cSharp net sass">                
+                    <a href="https://www.intelliflo.com/our-solutions/intelliflo-office/" target="_blank" class="text-decoration-none">
+                        <div class="card card-cover h-100 rounded-2 shadow-lg">
+                            <img src="img/portfolio/intelliflo-io-thumb.jpg" alt="intelliflo office screenshot" class="card-img-top"/>
+                            <div class="card-body">
+                                <span class="card-title d-block">intelliflo office</span>
+                                <span class="font-12 d-block">Market leading Financial Services</span>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->                                                   
+                    </a>
+                </div><!-- end col-md-4 -->
+
+                <div class="col-md-4 pb-2 grid-item wordpress">                
+                    <a href="https://beaufowler.com" target="_blank" class="text-decoration-none">
+                        <div class="card card-cover h-100 rounded-2 shadow-lg">
+                            <img src="img/portfolio/beau-new-thumb.jpg" alt="beau fowler site screenshot" class="card-img-top"/>
+                            <div class="card-body">
+                                <span class="card-title d-block">Beau Fowler</span>
+                                <span class="font-12 d-block">Multi-award-winning Actor, Writer &amp; Director</span>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->                                                   
+                    </a>
+                </div><!-- end col-md-4 -->
+                
+                <div class="col-md-4 pb-2 grid-item wordpress">
+                    <a href="https://momentumes.co.uk/" target="_blank" class="text-decoration-none">
+                        <div class="card card-cover h-100 rounded-2 shadow-lg">
+                            <img src="img/portfolio/momentum-es-thumb.jpg" alt="momentum enterprise solutions site screenshot" class="card-img-top" />
+                            <div class="card-body">
+                                <span class="card-title d-block">Momentum Enterprise Solutions</span>
+                                <span class="font-12 d-block">Enterprise IT Solutions</span>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->                                                   
+                    </a>
+                </div><!-- end col-md-4 -->                
+
+            </div><!-- end row -->
+
+            <div class="row mb-4">
+
+                <div class="col-md-4 pb-2 grid-item wordpress">                
+                    <a href="https://juliayoga.co.uk" target="_blank" class="text-decoration-none">
+                        <div class="card card-cover h-100 rounded-2 shadow-lg">
+                            <img src="img/portfolio/juliayoga-thumb.jpg" alt="yoga with julia site screenshot" class="card-img-top"/>
+                            <div class="card-body">
+                                <span class="card-title d-block">Yoga with Julia</span>
+                                <span class="font-12 d-block">Yoga Teacher based in Surrey</span>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->                                                  
+                    </a>
+                </div><!-- end col-md-4 -->
+                
+                <div class="col-md-4 pb-2 grid-item wordpress">
+                    <a href="http://tigerheartlondon.com" target="_blank" class="text-decoration-none">
+                        <div class="card card-cover h-100 rounded-2 shadow-lg">
+                            <img src="img/portfolio/thl-thumb.jpg" alt="tiger heart london site screenshot" class="card-img-top"/>
+                            <div class="card-body">
+                                <span class="card-title d-block">Tiger Heart London</span>
+                                <span class="font-12 d-block">Home of Digital Atelier, Sanj Surati</span>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->                                                   
+                    </a>
+                </div><!-- end col-md-4 -->
+
+                <div class="col-md-4 pb-2 grid-item html net">                
+                    <a href="https://weare.dermalogica.co.uk" target="_blank" class="text-decoration-none">
+                        <div class="card card-cover h-100 rounded-2 shadow-lg">
+                            <img src="img/portfolio/weare-thumb.jpg" alt="we are dermalogica site screenshot" class="card-img-top"/>
+                            <div class="card-body">
+                                <span class="card-title d-block">We Are Dermalogica</span>
+                                <span class="font-12 d-block">World reknowned skincare brand sold in over 80 countries</span>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->                                                   
+                    </a>
+                </div><!-- end col-md-4 -->                
+
+            </div><!-- end row -->
+
+            <div class="row pb-4">
+
+                <div class="col-md-4 pb-2 grid-item wordpress">                
+                    <a href="https://simonfowlerphotography.com" target="_blank" class="text-decoration-none">
+                        <div class="card card-cover h-100 rounded-2 shadow-lg">
+                            <img src="img/portfolio/simon-thumb.jpg" alt="simon fowler photography site screenshot" class="card-img-top"/>
+                            <div class="card-body">
+                                <span class="card-title d-block">Simon Fowler Photography</span>
+                                <span class="font-12 d-block">Multi-award-winning, legendary photographer</span>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->                                                   
+                    </a>
+                </div><!-- end col-md-4 -->
+                
+                <div class="col-md-4 pb-2 grid-item wordpress">
+                    <a href="https://kifilms.co.uk" target="_blank" class="text-decoration-none">
+                        <div class="card card-cover h-100 rounded-2 shadow-lg">
+                            <img src="img/portfolio/ki-new-thumb.jpg" alt="ki films site screenshot" class="card-img-top"/>
+                            <div class="card-body">
+                                <span class="card-title d-block">Ki Films</span>
+                                <span class="font-12 d-block">Multi-award-winning independent film company</span>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->                                                  
+                    </a>
+                </div><!-- end col-md-4 -->
+
+                <div class="col-md-4 pb-2 grid-item html">
+                    <a href="https://ken-hensley.com" target="_blank" class="text-decoration-none">
+                        <div class="card card-cover h-100 rounded-2 shadow-lg">
+                            <img src="img/portfolio/ken-thumb.jpg" alt="ken hensley site screenshot" class="card-img-top"/>
+                            <div class="card-body">
+                                <span class="card-title d-block">Ken Hensley</span>
+                                <span class="font-12 d-block">Musician, singer, songwriter, producer and legend (RIP)</span>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->                                                   
+                    </a>
+                </div><!-- end col-md-4 -->
+
+            </div><!-- end row -->
+
+            <div class="row mb-4">
+                
+                <div class="col-md-4 pb-2 grid-item wordpress design development">
+                    <a href="https://jaykaymediainc.com/" target="_blank" class="text-decoration-none">
+                        <div class="card card-cover h-100 rounded-2 shadow-lg">
+                            <img src="img/portfolio/jkm.jpg" alt="jay kay media inc site screenshot" class="card-img-top"/>
+                            <div class="card-body">
+                                <span class="card-title d-block">JayKay Media Inc</span>
+                                <span class="font-12 d-block">London based boutique media-content agency</span>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->                                                   
+                    </a>
+                </div><!-- end col-md-4 -->
+
+                <div class="col-md-4 pb-2 grid-item wordpress development">
+                    <a href="https://mediatainmentfinance.com/" target="_blank" class="text-decoration-none">
+                        <div class="card card-cover h-100 rounded-2 shadow-lg">
+                            <img src="img/portfolio/mtf.jpg" alt="mediatainment finance screenshot" class="card-img-top"/>
+                            <div class="card-body">
+                                <span class="card-title d-block">Mediatainment Finance</span>
+                                <span class="font-12 d-block">International business journal and analytics service</span>
+                          </div><!-- end card body -->
+                        </div><!-- end card -->                                                  
+                    </a>
+                </div><!-- end col-md-4 -->
+
+                <div class="col-md-4 pb-2 grid-item wordpress development">                
+                    <a href="https://techmutiny.co.uk/" target="_blank" class="text-decoration-none">
+                        <div class="card card-cover h-100 rounded-2 shadow-lg">
+                            <img src="img/portfolio/techmutiny.jpg" alt="techmutiny site screenshot" class="card-img-top"/>
+                            <div class="card-body">
+                                <span class="card-title d-block">TechMutiny</span>
+                                <span class="font-12 d-block">Tech news and information resource</span>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->                                                   
+                    </a>
+                </div><!-- end col-md-4 -->
+
+            </div><!-- end row -->
+
+        </div><!-- end grid -->
+
+    </div><!-- end container -->
+
+</main>
+
+<footer class="my-4">
+
+    <div class="container">
+
+        <hr class="w-100 border-primary">
+
+        <div class="row">
+
+            <ul class="nav d-flex align-items-center justify-content-center">
+                <li class="nav-item">
+                    <a href="https://uk.linkedin.com/in/bsweltman" class="nav-link rounded-2 text-center w-100">
+                        <i class="font-32 fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/benweltman" class="nav-link rounded-2 text-center w-100">
+                        <i class="font-32 fa fa-github"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://codepen.io/benweltman" class="nav-link rounded-2 text-center w-100">
+                        <i class="font-32 fa fa-codepen"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="d-flex justify-content-center my-2">
+                <a href="mailto:ben@benweltman.com?Subject=Website Contact" class="rounded-2 p-2">ben@benweltman.com</a>
+            </div><!-- end d-flex -->
+
+            <div class="d-flex justify-content-center">
+                <span><span id="copyDate"> </span> Ben Weltman</span>
+            </div><!-- end d-flex -->
+
+        </div><!-- end row -->
+
+    </div><!-- end div -->
+
+</footer>
+
+<!-- JS
+=============================================== -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71259489-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-71259489-1');
+
+    // Dynamic date
+    window.onload= function() {
+        //alert ("onload function");
+        SetYear();
+    }
+
+    // Light & Dark Mode + Colour Changes
+
+    $(document).ready(function () {
+        var light = localStorage.getItem('light');
+
+        if (light === 'True') {
+          localStorage.setItem('light', 'False');
+          modeSwitcher();
+        } else {
+          localStorage.setItem('light', 'True');
+          modeSwitcher();
+        }
+
+        var primary = localStorage.getItem('primary');
+
+        if (primary === null) {
+          $('#primary').val('#5aa1ad');
+          localStorage.setItem('primary', '#5aa1ad');
+          getPrimaryColor();
+        } else {
+          $('#primary').val(primary);
+          $('#prival').val(primary);
+        }    
+
+        // Primary Colour input changes
+        $('#prival').on('change', function () {
+          if ($('#prival').val() == '')
+          {
+            $('#primary').val('#5aa1ad');
+            $('#prival').val('#5aa1ad');
+            localStorage.setItem('primary', '#5aa1ad');
+            getPrimaryColor();
+          } else {
+            $('#primary').val($(this).val());
+            localStorage.setItem('primary', $(this).val());
+            getPrimaryColor();
+          }
+        });
+        $('#primary').on('change', function () {
+          $('#prival').val($(this).val());
+          localStorage.setItem('primary', $(this).val());
+        });
+
+        getPrimaryColor();
+
+        // init Isotope
+        var $grid = $('.grid').isotope({
+          // options
+        });
+        // filter items on button click
+        $('.filter-button-group').on( 'click', 'button', function() {
+          var filterValue = $(this).attr('data-filter');
+          $grid.isotope({ filter: filterValue });
+        });
+    });
+</script>
+
+<!-- End Document
+================================================== -->
+
+<!-- "Have no fear of perfection – you’ll never reach it" — SALVADOR DALI - From Quotesondesign.com -->
+</body>
+</html>

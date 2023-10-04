@@ -1,0 +1,114 @@
+<!-- Removed from nav -->
+
+<div class="col-12 mb-1">
+  <div class="d-block w-100">
+    <label for="secondary" class="text-nowrap d-block font-12">Secondary Colour:</label>
+    <div class="input-group">
+      <input type="color" id="secondary" class="form-control line-height-11" onchange="getSecondaryColor()"/>
+      <input type="text" id="secval" class="form-control font-12 line-height-11"  value="#3e747d"/>
+    </div><!-- end input-group -->
+  </div><!-- end d-block -->
+</div><!-- end col-12 -->
+
+<div class="col-12 mb-1">
+  <div class="d-block w-100">
+    <label for="highlight" class="text-nowrap d-block font-12">Highlight Colour:</label>
+    <div class="input-group">
+      <input type="color" id="highlight" class="form-control line-height-11" onchange="getHighlightColor()"/>
+      <input type="text" id="hival" class="form-control font-12 line-height-11"  value="#8dbec6"/>
+    </div><!-- end input-group -->
+  </div><!-- end d-block -->
+</div><!-- end col-12 -->
+
+<!-- Removed from main index script -->
+<script>
+  var secondary = localStorage.getItem('secondary');
+
+  if (secondary === null) {
+    $('#secondary').val('#3e747d');
+    localStorage.setItem('secondary', '#3e747d');
+    getSecondaryColor(); 
+  } else {
+    $('#secondary').val(secondary);
+    $('#secval').val(secondary);
+  }
+
+  var highlight = localStorage.getItem('highlight');
+
+  if (highlight === null) {
+    $('#highlight').val('#8dbec6');
+    localStorage.setItem('highlight', '#8dbec6');
+    getHighlightColor();
+  } else {
+    $('#highlight').val(highlight);
+    $('#hival').val(highlight);
+  }
+
+  // Secondary colour input changes
+
+  $('#secval').on('change', function () {
+    if ($('#secval').val() == '')
+    {
+      $('#secondary').val('#3e747d');
+      $('#secval').val('#3e747d');
+      localStorage.setItem('secondary', '#3e747d');
+      getSecondaryColor();  
+    } else {
+      $('#secondary').val($(this).val());
+      localStorage.setItem('secondary', $(this).val());
+      getSecondaryColor();
+    }        
+  });
+  $('#secondary').on('change', function () {
+    $('#secval').val($(this).val());
+    localStorage.setItem('secondary', $(this).val());          
+  });
+
+  // Highlight colour input changes
+
+  $('#hival').on('change', function () {
+    if ($('#hival').val() == '') 
+    {
+      $('#highlight').val('#8dbec6');
+      $('#hival').val('#8dbec6');
+      localStorage.setItem('highlight', '#8dbec6');
+      getHighlightColor();
+    } else {
+      localStorage.setItem('highlight', $(this).val());
+      getHighlightColor();
+    }        
+  });
+  $('#highlight').on('change', function () {
+    $('#hival').val($(this).val());
+    localStorage.setItem('highlight', $(this).val());                
+  });
+</script>
+
+<!-- Removed from main.js -->
+<script>
+  function getSecondaryColor() {
+    let input = document.querySelector('#secondary')
+    let colorS = HexToHSL(input.value)
+
+    console.log('hsl(' + colorS.h + ', ' + colorS.s + '%, ' + colorS.l + '%)')
+
+    $(':root').get(0).style.setProperty('--secondary', 'hsl(' + colorS.h + ', ' + colorS.s + '%, ' + colorS.l + '%)');
+    $(':root').get(0).style.setProperty('--secondary-h', colorS.h);
+    $(':root').get(0).style.setProperty('--secondary-s', colorS.s + '%');
+    $(':root').get(0).style.setProperty('--secondary-l', colorS.l + '%');
+
+}
+
+function getHighlightColor() {
+    let input = document.querySelector('#highlight')
+    let colorH = HexToHSL(input.value)
+
+    console.log('hsl(' + colorH.h + ', ' + colorH.s + '%, ' + colorH.l + '%)')
+
+    $(':root').get(0).style.setProperty('--highlight', 'hsl(' + colorH.h + ', ' + colorH.s + '%, ' + colorH.l + '%)');
+    $(':root').get(0).style.setProperty('--highlight-h', colorH.h);
+    $(':root').get(0).style.setProperty('--highlight-s', colorH.s + '%');
+    $(':root').get(0).style.setProperty('--highlight-l', colorH.l + '%');
+
+}
+</script>
