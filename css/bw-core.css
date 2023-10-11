@@ -13648,10 +13648,6 @@ button[aria-expanded=true] .material-icons {
   transition: 0.4s;
 }
 
-.grid {
-  min-height: 100vh;
-}
-
 .cv-accordion .btn:active, .cv-accordion .btn:focus, .cv-accordion .btn:visited {
   border: none !important;
 }
