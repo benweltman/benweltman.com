@@ -16,7 +16,7 @@ function modeSwitcher() {
       $('.bg-light').removeClass('bg-light').addClass('bg-dark');
       $('.btn-light').removeClass('btn-light').addClass('btn-dark');
       $('.navbar').removeClass('navbar-light').addClass('navbar-dark');
-      $('.border-dark').removeClass('border-dark').addClass('border-light');      
+      $('.border-dark-subtle').removeClass('border-dark-subtle').addClass('border-light-subtle');      
       $('.switch-icon').text('light_mode');
       $('.text-white').removeClass('text-white').addClass('text-dark');      
     } else {
@@ -25,7 +25,7 @@ function modeSwitcher() {
       $('.bg-dark').removeClass('bg-dark').addClass('bg-light');
       $('.btn-dark').removeClass('btn-dark').addClass('btn-light');
       $('.navbar').removeClass('navbar-dark').addClass('navbar-light');
-      $('.border-light').removeClass('border-light').addClass('border-dark');
+      $('.border-light-subtle').removeClass('border-light-subtle').addClass('border-dark-subtle');
       $('.switch-icon').text('dark_mode');
       $('.text-dark').removeClass('text-dark').addClass('text-white');
     }
