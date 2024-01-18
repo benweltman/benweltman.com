@@ -13593,9 +13593,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   min-height: 75px;
 }
 
-.nav-link {
+.nav-link:not(a[class*=switch]) {
   min-width: 100px;
 }
+
 .nav-link.active {
   border: var(--primary) 1px solid;
   color: var(--primary) !important;
@@ -13612,6 +13613,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 .menu-icon, .close-icon {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+li[class*=switchBtn] {
+  width: 50px !important;
+}
+
+.colour-switch {
+  cursor: pointer;
 }
 
 .colour-switch-input > input {
