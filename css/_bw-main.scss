@@ -305,8 +305,8 @@ html[data-bs-theme='light'] {
 		font-size: 2rem !important;
 	}
 
-	.nav-link {
-		min-width: 70px;
+	.nav-link:not(a[class*=switch]) {
+    	min-width: auto;
 	}
 }
 
