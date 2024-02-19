@@ -13559,7 +13559,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  color: white;
+  color: #f8f9fa;
   font-size: 1rem;
   font-weight: 300;
 }
@@ -13571,18 +13571,22 @@ a {
   transition: all 0.3s ease;
 }
 a:hover {
-  color: white !important;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #f8f9fa !important;
   text-decoration: none;
-  -webkit-transform: scale(1.005);
-          transform: scale(1.005);
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-weight: 400;
 }
 
+.header-link {
+  border-bottom: 1px solid transparent;
+}
 .header-link:hover {
-  border: white 1px solid !important;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: #f8f9fa 1px solid;
+  color: #f8f9fa !important;
 }
 .header-link:hover > .header-logo {
   -webkit-filter: brightness(0) invert(1);
@@ -13597,13 +13601,18 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   min-width: 100px;
 }
 
+.nav-link {
+  border-bottom: 1px solid transparent;
+}
 .nav-link.active {
-  border: var(--primary) 1px solid;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: var(--primary) 1px solid;
   color: var(--primary) !important;
 }
 .nav-link:hover {
-  border: white 1px solid;
-  color: white !important;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-bottom: #f8f9fa 1px solid;
+  color: #f8f9fa !important;
 }
 
 .nav-item .dropdown-menu {
@@ -13631,16 +13640,30 @@ li[class*=switchBtn] {
   font-weight: 300;
 }
 
+.btn {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: #f8f9fa 1px solid;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  color: #f8f9fa !important;
+}
+.btn :hover, .btn :focus, .btn :visited {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: #f8f9fa 1px solid;
+  color: #f8f9fa !important;
+}
+
 .btn-primary:hover {
-  background-color: white !important;
-  border-color: var(--primary) !important;
+  background-color: #f8f9fa !important;
+  border-bottom: var(--primary) 1px solid !important;
   color: var(--primary) !important;
 }
 
 .btn-outline-primary:hover {
-  background-color: transparent !important;
-  color: white !important;
-  border: white 1px solid !important;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-bottom: #f8f9fa 1px solid !important;
+  color: #f8f9fa !important;
 }
 
 button[aria-expanded=false] .material-icons {
@@ -13657,11 +13680,20 @@ button[aria-expanded=true] .material-icons {
   transition: 0.4s;
 }
 
+.cv-accordion .btn {
+  border-bottom: var(--primary) 1px solid !important;
+}
 .cv-accordion .btn:active, .cv-accordion .btn:focus, .cv-accordion .btn:visited {
-  border: none !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: var(--primary) 1px solid !important;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 .cv-accordion .btn:hover {
-  color: white !important;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-bottom: #f8f9fa 1px solid !important;
+  color: #f8f9fa !important;
 }
 
 .card {
@@ -13669,16 +13701,14 @@ button[aria-expanded=true] .material-icons {
   --bs-card-border-radius: 0.375rem;
   --bs-card-inner-border-radius: calc(0.375rem - 1px);
   --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
-  --bs-card-cap-color: white;
+  --bs-card-cap-color: $light;
   --bs-card-bg: $dark;
-  color: white !important;
+  color: #f8f9fa !important;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .card:hover {
   background-color: var(--primary);
-  -webkit-transform: scale(1.025);
-          transform: scale(1.025);
 }
 .card:hover img {
   opacity: 0.75;
@@ -13693,18 +13723,18 @@ button[aria-expanded=true] .material-icons {
 }
 
 p::-moz-selection {
-  color: white;
+  color: #f8f9fa;
   background-color: var(--primary);
 }
 
 p::selection {
-  color: white;
+  color: #f8f9fa;
   background-color: var(--primary);
 }
 
 .skill-item {
   background-color: var(--primary);
-  color: white;
+  color: #f8f9fa;
 }
 
 footer .nav {
@@ -13713,13 +13743,13 @@ footer .nav {
 
 /* Light & Dark Mode adjustments */
 html[data-bs-theme=light] body {
-  color: black;
+  color: #212529;
 }
 html[data-bs-theme=light] a:hover {
   color: rgba(0, 0, 0, 0.75) !important;
 }
 html[data-bs-theme=light] .header-link:hover {
-  border: black 1px solid !important;
+  border-bottom: #212529 1px solid !important;
 }
 html[data-bs-theme=light] .header-link:hover > .header-logo {
   -webkit-filter: brightness(0);
@@ -13730,85 +13760,104 @@ html[data-bs-theme=light] .header-logo, html[data-bs-theme=light] .hero-logo {
           filter: brightness(0);
 }
 html[data-bs-theme=light] .nav-link.active {
-  background-color: var(--primary) !important;
-  color: black !important;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: var(--primary) 1px solid;
+  color: var(--primary) !important;
 }
 html[data-bs-theme=light] .nav-link:hover {
-  color: black;
-  border: black 1px solid;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: #212529 1px solid;
+  color: #212529 !important;
+}
+html[data-bs-theme=light] .btn {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: #f8f9fa 1px solid;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  color: var(--primary) !important;
+}
+html[data-bs-theme=light] .btn :hover, html[data-bs-theme=light] .btn :focus, html[data-bs-theme=light] .btn :visited {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: #f8f9fa 1px solid;
+  color: #212529 !important;
+}
+html[data-bs-theme=light] .btn-primary:hover {
+  background-color: #212529 !important;
+  border-bottom: #212529 1px solid !important;
+  color: var(--primary);
+}
+html[data-bs-theme=light] .btn-outline-primary:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: #212529 1px solid !important;
+  color: #212529 !important;
+}
+html[data-bs-theme=light] .cv-accordion .btn:hover {
+  border-bottom: #212529 1px solid !important;
+  color: #212529 !important;
 }
 html[data-bs-theme=light] .card {
-  color: black !important;
+  color: #212529 !important;
 }
 html[data-bs-theme=light] .menu-icon, html[data-bs-theme=light] .close-icon {
   fill: #000 !important;
 }
 html[data-bs-theme=light] .cv-accordion .btn:hover {
-  color: black !important;
-}
-html[data-bs-theme=light] .btn-primary:hover {
-  background-color: black !important;
-  border-color: var(--primary) !important;
-  color: var(--primary) !important;
-}
-html[data-bs-theme=light] .btn-outline-primary:hover {
-  background-color: transparent !important;
-  color: black !important;
-  border: black 1px solid !important;
+  color: #212529 !important;
 }
 html[data-bs-theme=light] .white-primary a {
-  color: black;
+  color: #212529;
 }
 html[data-bs-theme=light] .white-primary a:hover {
-  color: black !important;
-  border: black 1px solid;
+  color: #212529 !important;
+  border-bottom: #212529 1px solid;
 }
 html[data-bs-theme=light] .white-primary .header-link:hover > .header-logo {
   -webkit-filter: brightness(0) invert(0);
           filter: brightness(0) invert(0);
 }
 html[data-bs-theme=light] .white-primary .nav-link.active {
-  border: black 1px solid;
-  color: black !important;
+  border-bottom: #212529 1px solid;
+  color: #212529 !important;
 }
 html[data-bs-theme=light] .black-primary a {
-  color: black;
+  color: #212529;
 }
 html[data-bs-theme=light] .black-primary a:hover, html[data-bs-theme=light] .black-primary a:hover .card-body {
-  color: white !important;
-  border: black 1px solid;
+  color: #f8f9fa !important;
+  border-bottom: #212529 1px solid;
 }
 html[data-bs-theme=light] .black-primary a.header-link:hover, html[data-bs-theme=light] .black-primary a.nav-link:hover {
-  color: black !important;
+  color: #212529 !important;
 }
 html[data-bs-theme=light] .black-primary .header-link:hover > .header-logo {
   -webkit-filter: brightness(0) invert(0);
           filter: brightness(0) invert(0);
 }
 html[data-bs-theme=light] .black-primary .nav-link.active {
-  border: black 1px solid;
-  color: white !important;
+  border-bottom: #212529 1px solid;
+  color: #f8f9fa !important;
 }
 html[data-bs-theme=light] .black-primary .nav-link.active:hover {
-  color: white !important;
+  color: #f8f9fa !important;
 }
 
 .white-primary a:hover, .white-primary a:hover .card-body {
-  color: black !important;
+  color: #212529 !important;
 }
 .white-primary .header-link:hover > .header-logo {
   -webkit-filter: brightness(0) invert(0);
           filter: brightness(0) invert(0);
 }
 .white-primary .nav-link.active {
-  color: black !important;
+  color: #212529 !important;
 }
 .white-primary p::-moz-selection {
-  color: black;
+  color: #212529;
   background-color: var(--primary);
 }
 .white-primary p::selection {
-  color: black;
+  color: #212529;
   background-color: var(--primary);
 }
 

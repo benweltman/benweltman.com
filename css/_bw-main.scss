@@ -1,6 +1,6 @@
 // BW Main
 body {
-	color: white;
+	color: $light;
 	font-size: 1rem;
 	font-weight: 300;
 }
@@ -11,9 +11,9 @@ a {
 	transition: all .3s ease;	
 
 	&:hover {
-	  color: white !important;
-	  text-decoration: none;
-	  transform: scale(1.005);
+		background-color: rgba(black, .1);
+	  	color: $light !important;
+	  	text-decoration: none;
 	}
 }
 
@@ -22,12 +22,16 @@ h1, h2, h3, h4, h5 {
 }
 
 .header-link { 
- 	&:hover {
-		border: white 1px solid !important;
-	}
+	border-bottom: 1px solid transparent;
 
-	&:hover > .header-logo {
-		filter: brightness(0) invert(1);
+ 	&:hover {
+		background-color: rgba(black, .1);
+		border-bottom: $light 1px solid;
+		color: $light !important;
+
+		& > .header-logo {
+			filter: brightness(0) invert(1);
+		}
 	}
 }
 
@@ -40,14 +44,18 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav-link {
+	border-bottom: 1px solid transparent;
+
 	&.active {
-		border: var(--primary) 1px solid;
+		background-color: rgba(black, .2);
+		border-bottom: var(--primary) 1px solid;
 		color: var(--primary) !important;
 	}
 
 	&:hover {
-		border: white 1px solid;
-		color: white !important;
+		background-color: rgba(black, .25);
+		border-bottom: $light 1px solid;
+		color: $light !important;
 	}
 }
 
@@ -75,17 +83,32 @@ li[class*=switchBtn] {
 	font-weight: 300;
 }
 
+.btn {
+	background-color: rgba(black, .2);
+	border-bottom: $light 1px solid;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	color: $light !important;
+
+	:hover, :focus, :visited {
+		background-color: rgba(black, .25);
+		border: $light 1px solid;
+		color: $light !important;
+	}
+}
+
 .btn-primary:hover {
-	background-color: white !important;
-	border-color: var(--primary) !important;
+	background-color: $light !important;
+	border-bottom: var(--primary) 1px solid !important;
 	color: var(--primary) !important;
 }
 
- .btn-outline-primary:hover {
- 	background-color: transparent !important;
- 	color: white !important;
- 	border: white 1px solid !important;
- }
+.btn-outline-primary:hover {
+ 	background-color: rgba(black, .25);
+ 	border-bottom: $light 1px solid !important;
+ 	color: $light !important;
+}
 
 button[aria-expanded=false] .material-icons {
     transform: rotate(0deg);
@@ -99,12 +122,22 @@ button[aria-expanded=true] .material-icons {
 
 .cv-accordion {
 
-	.btn:active, .btn:focus, .btn:visited {
-		border: none !important;
-	}
+	.btn {
+		border-bottom: var(--primary) 1px solid !important;
 
-	.btn:hover {
-		color: white !important;
+		&:active, &:focus, &:visited {
+			background-color: rgba(black, .2);
+			border-bottom: var(--primary) 1px solid !important;
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+		}
+
+		&:hover {
+			background-color: rgba(black, .25);
+			border-bottom: $light 1px solid !important;
+			color: $light !important;
+		}
 	}
 }
 
@@ -113,14 +146,13 @@ button[aria-expanded=true] .material-icons {
     --bs-card-border-radius: 0.375rem;
     --bs-card-inner-border-radius: calc(0.375rem - 1px);
     --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
-    --bs-card-cap-color: white;
+    --bs-card-cap-color: $light;
     --bs-card-bg: $dark;
-    color: white !important;
+    color: $light !important;
     transition: all .3s ease;
 
     &:hover {
     	background-color: var(--primary);
-    	transform: scale(1.025);
 
     	img {
     		opacity: 0.75;
@@ -137,13 +169,13 @@ button[aria-expanded=true] .material-icons {
 }
 
 p::selection {
-	color: white;
+	color: $light;
 	background-color: var(--primary);
 }
 
 .skill-item {
 	background-color: var(--primary);
-	color: white;
+	color: $light;
 }
 
 footer {
@@ -157,7 +189,7 @@ footer {
 html[data-bs-theme='light'] {
 
 	body {
-		color: black;
+		color: $dark;
 	}
 
 	a:hover {
@@ -165,7 +197,7 @@ html[data-bs-theme='light'] {
 	}
 
 	.header-link:hover {
-		border: black 1px solid !important;
+		border-bottom: $dark 1px solid !important;
 	}	
 
 	.header-link:hover > .header-logo {
@@ -178,18 +210,56 @@ html[data-bs-theme='light'] {
 
 	.nav-link {
 		&.active {
-			background-color: var(--primary) !important;
-			color: black !important;
+			background-color: rgba(black, .1);
+			border-bottom: var(--primary) 1px solid;
+			color: var(--primary) !important;
 		}
 
 		&:hover {
-			color: black;
-			border: black 1px solid;
+			background-color: rgba(black, .05);
+			border-bottom: $dark 1px solid;
+			color: $dark !important;
+		}
+	}
+
+	.btn {
+		background-color: rgba(black, .1);
+		border-bottom: $light 1px solid;		
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+		color: var(--primary) !important;
+
+		:hover, :focus, :visited {
+			background-color: rgba(black, .05);
+			border: $light 1px solid;
+			color: $dark !important;
+		}
+	}
+
+	.btn-primary:hover {
+		background-color: $dark !important;
+		border-bottom: $dark 1px solid !important;
+		color: var(--primary);
+	}
+
+	.btn-outline-primary:hover {
+		background-color: rgba(black, .05);	 	
+	 	border-bottom: $dark 1px solid !important;
+	 	color: $dark !important;
+	}
+
+	.cv-accordion {
+		.btn {
+			&:hover {
+				border-bottom: $dark 1px solid !important;
+				color: $dark !important;
+			}
 		}
 	}
 
 	.card {
-		color: black !important;
+		color: $dark !important;
 	}
 
 	.menu-icon, .close-icon {
@@ -197,28 +267,16 @@ html[data-bs-theme='light'] {
 	}
 
 	.cv-accordion .btn:hover {
-		color: black !important;
+		color: $dark !important;
 	}
-
-	.btn-primary:hover {
-		background-color: black !important;
-		border-color: var(--primary) !important;
-		color: var(--primary) !important;
-	}
-
-	 .btn-outline-primary:hover {
-	 	background-color: transparent !important;
-	 	color: black !important;
-	 	border: black 1px solid !important;
-	 }
 
 	.white-primary {
 		a {
-			color: black;
+			color: $dark;
 
 			&:hover {
-			  color: black !important;
-			  border: black 1px solid;
+			  color: $dark !important;
+			  border-bottom: $dark 1px solid;
 			}
 		}
 
@@ -228,23 +286,23 @@ html[data-bs-theme='light'] {
 
 
 		.nav-link.active {
-			border: black 1px solid;
-			color: black !important;
+			border-bottom: $dark 1px solid;
+			color: $dark !important;
 		}
 	}
 
 	.black-primary {
 		a {
-			color: black;
+			color: $dark;
 
 			&:hover, &:hover .card-body {
-			  color: white !important;
-			  border: black 1px solid;
+			  color: $light !important;
+			  border-bottom: $dark 1px solid;
 			}
 		}
 
 		a.header-link:hover, a.nav-link:hover {
-			color: black !important;
+			color: $dark !important;
 		}
 
 		.header-link:hover > .header-logo {
@@ -252,11 +310,11 @@ html[data-bs-theme='light'] {
 		}
 
 		.nav-link.active {
-			border: black 1px solid;
-			color: white !important;
+			border-bottom: $dark 1px solid;
+			color: $light !important;
 
 			&:hover {
-				color: white !important;
+				color: $light !important;
 			}
 		}
 	}
@@ -264,7 +322,7 @@ html[data-bs-theme='light'] {
 
 .white-primary {
 	a:hover, a:hover .card-body {
-		color: black !important;
+		color: $dark !important;
 	}
 
 	.header-link:hover > .header-logo {
@@ -273,11 +331,11 @@ html[data-bs-theme='light'] {
 
 
 	.nav-link.active {
-		color: black !important;
+		color: $dark !important;
 	}
 
 	p::selection {
-		color: black;
+		color: $dark;
 		background-color: var(--primary);
 	}
 }
