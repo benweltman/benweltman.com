@@ -117,7 +117,7 @@
                         <div class="d-block w-100">
                           <div class="input-group colour-switch-input">
                             <input type="color" id="primary" class="form-control lh-lg" onchange="getPrimaryColor()"/>
-                            <input type="text" id="prival" class="form-control font-11 lh-sm"  value="#5aa1ad"/>
+                            <input type="text" id="prival" class="form-control font-11 lh-sm"  value="#01a2a2"/>
                           </div><!-- end input-group -->
                         </div><!-- end d-block -->
                       </div><!-- end col-12 -->                
@@ -297,8 +297,8 @@
         var primary = localStorage.getItem('primary');
 
         if (primary === null) {
-          $('#primary').val('#5aa1ad');
-          localStorage.setItem('primary', '#5aa1ad');
+          $('#primary').val('#01a2a2');
+          localStorage.setItem('primary', '#01a2a2');
           getPrimaryColor();
         } else {
           $('#primary').val(primary);
@@ -309,9 +309,9 @@
         $('#prival').on('change', function () {
           if ($('#prival').val() == '')
           {
-            $('#primary').val('#5aa1ad');
-            $('#prival').val('#5aa1ad');
-            localStorage.setItem('primary', '#5aa1ad');
+            $('#primary').val('#01a2a2');
+            $('#prival').val('#01a2a2');
+            localStorage.setItem('primary', '#01a2a2');
             getPrimaryColor();
           } else {
             $('#primary').val($(this).val());
