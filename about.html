@@ -56,7 +56,7 @@
     function SetYear() {
         var thisDate=new Date();
         var thisYear=thisDate.getFullYear();
-        document.getElementById('copyDate').innerHTML="&copy; "+thisYear;
+        document.getElementById('copyDate').innerHTML=thisYear+" &copy;";
     }
 </script>
 
@@ -89,13 +89,13 @@
     <div class="navbar-collapse collapse" id="bdNavbar">
       <ul class="navbar-nav flex-row flex-wrap mt-4 mt-md-0 ms-md-auto gap-md-2 justify-content-between align-items-center">
         <li class="nav-item lh-base">
-          <a class="nav-link font-20 p-2 rounded-1 text-center w-100" aria-current="true" href="index.html">Home</a>
-        </li>
-        <li class="nav-item lh-base">
           <a class="nav-link font-20 p-2 rounded-1 text-center w-100" href="portfolio.html">Portfolio</a>
         </li>
         <li class="nav-item lh-base">
           <a class="nav-link font-20 p-2 rounded-1 text-center w-100 active" href="about.html">About</a>
+        </li>
+        <li class="nav-item lh-base d-none">
+          <a class="nav-link font-20 p-2 rounded-1 text-center w-100" href="notes.html">Notes</a>
         </li>
         <li class="nav-item switchBtn lh-base">            
             <a class="nav-link font-20 p-2 rounded-1 text-center switch" href="#" onclick="modeSwitcher()" title="Mode switcher">
@@ -190,14 +190,16 @@
                     
                     <div class="collapse show px-1" id="collapse1">
                          <ul>
-                            <li>Front end developer with proven track record of successful web projects</li>
-                            <li>12+ years of experience working in commercial agile development environments</li>
-                            <li>6+ years of experience working for a Fintech SaaS company with over 200 developers globally</li>
-                            <li>Experience working on largescale codebases, repos, and websites (with 150,000+ users)</li>
-                            <li>Skilled in responsive web design, front end technologies and general UX principles</li>
+                            <li>
+                                Front-end developer with 12+ years crafting responsive, accessible web experiences in agile teams
+                            </li>
+                            <li>
+                                Bringing a designer's eye, a developer's precision, and a user-first mindset to every project, from fintech SaaS platforms to high-traffic consumer sites
+                            </li>
+                            <li>
+                                Known for clear thinking, clean code, and collaborative problem-solving
+                            </li>
                             <li>Highly motivated and results driven</li>
-                            <li>Excellent eye for detail</li>
-                            <li>Great team player and collaborator</li>                    
                         </ul>
                     </div>
 
@@ -215,56 +217,101 @@
                     </a>
 
                     <div class="collapse px-3" id="collapse2">
-                        <div class="d-inline-flex align-items-center w-100">
-                            <p class="text-primary">Front End Developer / UX Designer @ <a href="https://intelliflo.com" target="_blank">Intelliflo Ltd</a></p>
-                            <p class="text-primary ms-auto"><b>January 2019 – Present</b></p>
-                        </div>
+                        <p class="w-100 text-primary">
+                            <b>Front End Developer - </b>
+                            <a href="https://intelliflo.com" target="_blank">Intelliflo Ltd</a>
+                        </p>                            
+                        <p class="text-primary"><i>January 2019 – Present</i></p>
                         <p class="text-justify">
-                            Main responsibilities: front-end development, user experience design and engineering for Intelliflo’s award-winning financial SaaS products, which are tailored to the real needs of advice professionals. The websites are mainly .net, MVC based using C# with Razor, HTML, CSS, SCSS, SASS, Bootstrap, JavaScript, Git (and GitHub), in an Agile web development environment. With some exposure to JavaScript frameworks like React, Vue, Angular and Node. All hosted on AWS (Amazon Web Services).
+                            Driving front-end development and UX design across Intelliflo Office — a flagship financial SaaS platform used by thousands of advisers across the UK.
                         </p>
-                        <p>Some of those projects included:</p>
                             <ul class="text-justify">
                                 <li>
-                                    Redesign of the main intelliflo office website. Largescale project that took more than a year to complete; the site has over 365 pages and 150,000+ users around the world (UK, US, Australia & Canada). The redesign increased customer engagement and satisfaction levels, as well as helping the company to attract new customers including the massive US based company State Farm.
+                                    Led UI/UX improvements for Intelliflo Office, focusing on accessibility, responsiveness, and design consistency across modules.
                                 </li>
-                                <li>Redesign of the personal finance portfolio website, general improvements for responsiveness, cross browser compatibility and accessibility.</li>
                                 <li>
-                                    Creation of the intelliflo office style guide; a design resource for the intelliflo developers to use to help ensure consistency in the intelliflo UI & UX, as well as providing guidance and component-based designs.
+                                    Built and maintained scalable front-end components using HTML, SASS/SCSS, JavaScript, and Razor, with a strong emphasis on modularity and maintainability
                                 </li>
-                                <li>Bootstrap version updates from 3 to 4, and again from 4 to 5, for intelliflo office and the personal finance portal.</li>
-                                <li>Establishment of front-end development processes to better collaborate with developers and other departments.</li>
-                                <li>Collaboration with the Software Architects to improve front end technologies.</li>
-                                <li>Improvement of the SASS/ SCSS for intelliflo office.</li>
+                                <li>
+                                    Played a key role in the platform’s architectural evolution — contributing to the transition from a monolithic structure to a Micro Frontend (MFE) approach using React.
+                                </li>
+                                <li>
+                                    Collaborated with cross-functional teams to integrate React-based MFEs into legacy Razor views, ensuring seamless user experience and performance.
+                                </li>
+                                <li>
+                                    Advocated for front-end best practices, including BEM methodology, semantic markup, and performance optimization.
+                                </li>
+                                <li>
+                                    Contributed to design system discussions and helped define reusable patterns for future development.</li>
                             </ul>
                         </p>
 
-                        <div class="d-inline-flex align-items-center w-100">
-                            <p class="text-primary text-justify">Web Developer @ <a href="https://www.dermalogica.co.uk/" target="_blank">Dermalogica UK Ltd</a></p>
-                            <p class="text-primary ms-auto"><b>August 2012 – December 2018</b></p>
-                        </div>
-                        <p class="text-justify">
-                            Main responsibilities: front-end development of new web projects to improve dermalogica’s online websites and services for the UK, Ireland, Germany, Canada and Australia. Secondary responsibilities; maintenance, support, training and improvement of any new or existing websites and services.
+                        <p>Tech: HTML, CSS/SCSS, SASS, JavaScript, Razor, Bootstrap, React, Git/GitHub, AWS, Docker, Node, C#, .Net</p>
+
+                        <br />
+
+                        <p class="text-primary">
+                            <b>Web Developer - </b>
+                            <a href="https://www.dermalogica.co.uk/" target="_blank">Dermalogica UK Ltd</a>
                         </p>
-                        <p>Some of those projects included:</p>
+                        <p class="text-primary"><i>August 2012 – December 2018</i></p>
+                        <p class="text-justify">
+                            Delivered front-end development for Dermalogica's UK digital ecosystem, supporting high-traffic e-commerce, booking, and marketing platforms.
+                        </p>
                             <ul class="text-justify">
                                 <li>
-                                    We Are Dermalogica; a new customer facing site built to generate new business leads and allow businesses to inquire about the companies services. Improved new business lead and generation by 75%. Fully responsive, built using asp.net, html5, css3, js and jQuery. The site was also replicated for Australia, Canada, France & Germany.
+                                    Built responsive, mobile-first interfaces for Dermalogica’s UK websites, ensuring consistent branding and smooth user journeys across devices.
                                 </li>
                                 <li>
-                                    Dermalogica Connect; a comprehensive portal website that linked all of Dermalogica's web services into one place. Responsive, accessible and user friendly Connect was built with Squiz Matrix, an enterprise level CMS for the back end, with html5, css3, JS and jQuery for the front end. Connect also featured a free Website Builder that built responsive, modern websites in under 15 minutes. Increased dermalogica’s web presence and provided websites for 1000s of customers. Also improved website traffic for all of dermalogica’s sites as a result.
+                                    Developed and maintained key customer-facing features — including the online booking system — improving usability and supporting increased traffic and conversions.
                                 </li>
                                 <li>
-                                    The Dermalogica Education System; a bespoke, responsive web-based booking system for the Education department. Built entirely in house using ASP.NET, MVC, C# with razor, HTML5, CSS3, JS and jQuery, using a custom built web API, and an MSQL database all hosted with Amazon Web Services.
+                                    Implemented clean, maintainable front-end code using HTML5, CSS3, JavaScript, jQuery, and Razor within an ASP.NET MVC environment.
+                                </li>
+                                <li>
+                                    Collaborated closely with designers, marketers, and backend developers to deliver new campaigns, product launches, and seasonal updates at pace.
+                                </li>
+                                <li>
+                                    Improved site performance and SEO through semantic markup, asset optimisation, and iterative refinements.
+                                </li>
+                                <li>
+                                    Supported integrations with backend systems, payment flows, and content management processes.
                                 </li>
                             </ul>
                         </p>
 
-                        <div class="d-inline-flex align-items-center w-100">
-                            <p class="text-primary">Web Developer & Consultant @ Freelance</p>
-                            <p class="text-primary ms-auto"><b>August 2010 – Present</b></p>
-                        </div>
+                        <p>Tech: HTML5, CSS3, JavaScript, jQuery, ASP.NET MVC, C#, Razor, SQL, AWS</p>
+
+                        <br />
+
+                        <p class="text-primary">
+                            <b>Web Developer & Consultant - </b>
+                            <a href="https://benweltman.com">Ben Weltman (Freelance)</a>
+                        </p>
+                        <p class="text-primary">August 2010 – Present</p>
                         <p class="text-justify">
-                            Freelance consultant providing website design and development for a broad range of clients; from musicians and life coaches to filmmakers and training companies. Key skills; requirements gathering, research, development, system development life cycle, design, and development for the web. Generally, sites comprised of HTML, CSS, some JavaScript and then some exposure to PHP through WordPress and other content management systems. As well as quality assurance and user acceptance testing, support, and maintenance.
+                            Providing end-to-end web design and development for small businesses, creatives, and independent clients, delivering clean, responsive sites tailored to real-world needs.
+                        </p>
+                        <ul class="text-justify">
+                            <li>
+                                Designed and built bespoke websites with a strong focus on usability, clarity, and mobile-first layouts.
+                            </li>
+                            <li>
+                                Developed lightweight, maintainable front-end code using HTML, CSS, JavaScript, and WordPress/PHP where required.
+                            </li>
+                            <li>
+                                Consulted on branding, UX improvements, content structure, and technical decision-making to help clients shape their online presence.
+                            </li>
+                            <li>
+                                Implemented performance optimisations, accessibility improvements, and SEO-friendly markup to support visibility and engagement.
+                            </li>
+                            <li>
+                                Provided ongoing support, updates, and enhancements, ensuring long-term reliability and ease of maintenance.
+                            </li>
+                        </ul>
+                        <p>Tech: HTML, CSS, JavaScript, PHP, WordPress</p>
+                        <p>
+                            You can see more of my freelance work <a href="portfolio.html">here</a>.
                         </p>
                     </div>  
 
@@ -282,10 +329,36 @@
                   </a>
 
                     <div class="collapse px-3" id="collapse3">
-                        <p><span class="text-primary">Primary</span><br /> HTML, CSS, SASS, SCSS, Bootstrap, JavaScript, JQuery</p>
-                        <p><span class="text-primary">Secondary</span><br /> CSHTML, Razor, .NET, C#, Node, React, Vue, Nunjucks, Git, SQL</p>                    
-                        <p><span class="text-primary">Paradigms &amp; Design Patterns</span><br /> Responsive Web Design (RWD), User Experience (UX), Object Orientated Programming (OOP), Model-View-Controller (MVC), Block Element Modifier (BEM), Relational Databases (RDB), Content Management Systems (CMS)</p>
-                        <p><span class="text-primary">Tools</span><br /> Github, Visual Studio, Sublime, SQL Server Management Studio, TortoiseGit, Photoshop, Koala, Prepos, Wordpress, FileZilla, Docker, AWS, Azure Dev Ops (TFS), Jira</p>                    
+                        <div class="row">
+                            <div class="col-6">
+                                <p>
+                                    <span class="text-primary"><i>Core Front End</i></span>
+                                    <br /> HTML, CSS, SASS, JavaScript, JQuery
+                                </p>
+                                <p>
+                                    <span class="text-primary"><i>UX & Design</i></span>
+                                    <br /> Figma, Photoshop, Responsive Web Design, BEM
+                                </p>
+                                <p>
+                                    <span class="text-primary"><i>Libraries, Frameworks &amp; Design Patterns</i></span>
+                                    <br /> React, Bootstrap, Kendo, Tailwind, MVC, OOP, MFE
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p>
+                                    <span class="text-primary"><i>DevOps &amp; Backend</i></span>
+                                    <br /> Git, Docker, Node, Razor, C#, SQL, AWS
+                                </p>
+                                <p>
+                                    <span class="text-primary"><i>Workflow &amp; Collaboration</i></span>
+                                    <br /> Jira, Github, Teams, Azure DevOps, Agile, CI/ CD
+                                </p>
+                                <p>
+                                    <span class="text-primary"><i>Tools</i></span>
+                                    <br /> Tortoise Git, Sublime Text, Visual Studio, SSMS, Photoshop
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                 </div><!-- end col-12 -->
@@ -302,11 +375,11 @@
                     </a>
 
                     <div class="collapse px-3" id="collapse4">
-                        <p class="text-primary">London South Bank University – 2007 – 2010</p>
+                        <p class="text-primary"><i>London South Bank University 2007 – 2010</i></p>
                         <p>Internet Computing BSc – Graduated with First Class Honours</p>
-                        <p class="text-primary">Esher College – 2002 – 2004</p>
+                        <p class="text-primary"><i>Esher College 2002 – 2004</i></p>
                         <p>A-Level - Information Technology<br />AS-Level - Information Technology, Biology, Chemistry & General Studies</p>
-                        <p class="text-primary">Wimbledon College – 1999 – 2002</p>
+                        <p class="text-primary"><i>Wimbledon College 1999 – 2002</i></p>
                         <p>GCSEs - Maths, Science (Double Award), English, Information Technology, Design Technology, French, Geography, Physical Education & Religious Education</p>
                     </div>
 
@@ -324,7 +397,7 @@
                     </a>
 
                     <div class="collapse px-3" id="collapse5">
-                        <p class="text-justify">Music, film, games, technology, pc hardware, Warhammer 40,000, Japanese culture & history, anime, sci-fi, philosophy, science, martial arts,  football, golf, tennis.</p>
+                        <p class="text-justify">Music, film, sci-fi, Japanese culture, sports, nature and Warhammer 40K amongst many other things.</p>
                     </div>
 
                 </div><!-- end col-12 -->
@@ -341,7 +414,7 @@
                     </a>
 
                     <div class="collapse px-3" id="collapse6">
-                        <p>Based in Poole, Dorset. (Currently working remotely and very happy to be doing so).</p>
+                        <p>Based in Poole, Dorset. Mainly interested in remote working opportunities, would potentially relocate for the right role and company.</p>
                     </div>  
 
                 </div><!-- end col-12 -->

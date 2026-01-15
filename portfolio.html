@@ -56,7 +56,7 @@
     function SetYear() {
         var thisDate=new Date();
         var thisYear=thisDate.getFullYear();
-        document.getElementById('copyDate').innerHTML="&copy; "+thisYear;
+        document.getElementById('copyDate').innerHTML=thisYear+" &copy;";
     }
 </script>
 
@@ -89,13 +89,13 @@
     <div class="navbar-collapse collapse" id="bdNavbar">
       <ul class="navbar-nav flex-row flex-wrap mt-4 mt-md-0 ms-md-auto gap-md-2 justify-content-between align-items-center">
         <li class="nav-item lh-base">
-          <a class="nav-link font-20 p-2 rounded-1 text-center w-100" aria-current="true" href="index.html">Home</a>
-        </li>
-        <li class="nav-item lh-base">
           <a class="nav-link font-20 p-2 rounded-1 text-center w-100 active" href="portfolio.html">Portfolio</a>
         </li>
         <li class="nav-item lh-base">
           <a class="nav-link font-20 p-2 rounded-1 text-center w-100" href="about.html">About</a>
+        </li>
+        <li class="nav-item lh-base d-none">
+          <a class="nav-link font-20 p-2 rounded-1 text-center w-100" href="notes.html">Notes</a>
         </li>
         <li class="nav-item switchBtn lh-base">            
             <a class="nav-link font-20 p-2 rounded-1 text-center switch" href="#" onclick="modeSwitcher()" title="Mode switcher">
