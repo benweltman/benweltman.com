@@ -1,0 +1,50 @@
+.logoContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  --logo-color: currentColor;
+  display: block;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.logoTriangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: calc(32px * 0.3) solid transparent;
+  border-right: calc(32px * 0.3) solid transparent;
+  border-bottom: calc(32px * 0.5) solid var(--logo-color);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: calc(32px * 0.05);
+  z-index: 1;
+}
+
+.dot {
+  position: absolute;
+  width: 12%;
+  height: 12%;
+  background-color: var(--logo-color);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.dotTop {
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+}
+
+.dotBottomLeft {
+  left: calc(50% - 41%);
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+
+.dotBottomRight {
+  left: calc(50% + 41%);
+  bottom: 5%;
+  transform: translateX(-50%);
+}
