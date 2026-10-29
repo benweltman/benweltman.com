@@ -1,11 +1,32 @@
-# benweltman.com
-![repository-open-graph-template](https://github.com/benweltman/benweltman.com/assets/2255246/d70311b0-3235-4e8f-9e34-adaf862e034e)
-My Personal Website is a simple html site to promote my personal portfolio, freelance work, overall experience and knowledge as a front end web developer.
+# React + TypeScript + Vite
 
-The site is built using bootstrap v5, with plain html, sass (css), as well as some javascript and jquery. 
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-The portfolio page uses metaphizzy's isoptope layout library for grid sorting and filtering options.
+Currently, two official plugins are available:
 
-The site has a colour picker that allows users to change the colours, as well as enable dark or light mode, which has all been built using javascript & jquery.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-The sass is compiled using prepos.
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
+
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.

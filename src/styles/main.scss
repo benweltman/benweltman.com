@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@theme {
+  --color-primary: hsl(var(--primary));
+}
+
+/* Custom Dark Mode Backgrounds */
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #fff;
+  --border: #e5e4e7;    
+  --primary: #3eb18f;
+  --text: #0f172b;
+  --text-h: #08060d;
+  background: var(--bg);
+  color: var(--text);
+  color-scheme: light dark;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161c1a;
+    --border: #2a322c;
+    --primary: #3eb18f;
+    --text: #e2e8f0;
+    --text-h: #fff;
+    background: var(--bg);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark-bg-custom {
+  background-color: #161c1a; /* Deep Green-Grey */
+}
+
+.dark-card-custom {
+  background-color: #242a26; /* Slightly lighter shade for cards */
+}
+
+/* Focus states for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
