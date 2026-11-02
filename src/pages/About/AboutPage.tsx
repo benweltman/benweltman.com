@@ -94,11 +94,11 @@ of software for financial advisers.</p>
   ];
 
   const skills = [
-    { category: 'Front End', items: ['HTML', 'CSS', 'SASS', 'JS', 'TypeScript', 'React', 'Bootstrap', 'Tailwind', 'jQuery'] },
+    { category: 'Front End', items: ['HTML', 'CSS', 'SASS', 'JavaScript', 'TypeScript', 'React', 'Bootstrap', 'Tailwind', 'Kendo', 'jQuery', 'Razor'] },
     { category: 'UX & Design', items: ['Figma', 'Photoshop', 'Rapid Prototyping'] },
-    { category: 'Backend & DevOps', items: ['Git', 'AWS', 'C#', 'SQL', 'Docker', 'Kubernetes'] },
+    { category: 'Backend & DevOps', items: ['C#', 'SQL', 'Powershell', 'Git', 'AWS'] },
     { category: 'Design Patterns', items: ['BEM', 'MFE', 'MVC', 'OOP'] },
-    { category: 'Tools', items: ['Claude Code', 'GitHub', 'Visual Studio', 'VS Code', 'Terminal', 'Vite', 'Webpack', 'Sublime Text', 'SSMS'] },
+    { category: 'Tools', items: ['Claude Code', 'GitHub', 'Visual Studio', 'VS Code', 'Terminal', 'Vite', 'Webpack', 'Docker', 'Kubernetes', 'WordPress', 'SSMS'] },
   ];
 
   return (
@@ -114,7 +114,7 @@ of software for financial advisers.</p>
                 />
             </div>
           </div>
-          <div className="sticky top-24 p-6 bg-[#f1f4f3] dark:bg-[#242a26] rounded-lg border border-slate-200 dark:border-[#2a322c] space-y-8">
+          <div className="sticky top-24 p-6 bg-[#f1f4f3]/50 dark:bg-[#2a322c]/60 rounded-lg border border-slate-200 dark:border-[#2a322c] space-y-8">
             <div>
               <h3 className="font-normal text-lg mb-3 text-primary">Contact Details</h3>
               <div className="space-y-3 text-sm opacity-80">
@@ -177,7 +177,7 @@ of software for financial advisers.</p>
             <div className="space-y-4">
               <h3 className="font-normal text-lg mb-3 text-primary">Interests</h3>
               <div className="flex flex-wrap gap-2">
-                {['Music', 'Film', 'Food', 'Cooking', 'Sports', 'Sci-fi', 'Anime', 'Japan', 'Warhammer 40K', 'Martial Arts', 'Gardening', 'Vistagazing'].map(item => (
+                {['Music', 'Film', 'Food', 'Cooking', 'Sci-fi', 'Anime', 'Japan', 'Travel', 'Warhammer 40K', 'Martial Arts', 'Sports', 'Gardening', 'Vistagazing'].map(item => (
                   <span key={item} className="px-2 py-1 text-xs rounded-md bg-[#f1f4f3] dark:bg-[#2a322c] border border-slate-200 dark:border-[#343d37]">
                     {item}
                   </span>

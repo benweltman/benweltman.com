@@ -12,7 +12,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, children, isOpen, 
     <div className="border-b border-slate-200 dark:border-[#343d37] last:border-none">
       <button
         onClick={onToggle}
-        className="w-full py-4 px-2 flex justify-between items-center text-left hover:bg-[#e6ecea] dark:hover:bg-[#3d4841] group"
+        className="w-full py-4 px-2 flex justify-between items-center text-left hover:bg-[#e6ecea] dark:hover:bg-[#3d4841] group  cursor-pointer"
       >
         <span className="font-normal text-lg group-hover:text-primary">{title}</span>
         <span className={`transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
@@ -44,7 +44,7 @@ const CVSection: React.FC<CVSectionProps> = ({ title, items, defaultOpenIndex = 
   return (
     <div className="mb-12">
       <h2 className="text-2xl font-normal text-primary mb-6">{title}</h2>
-      <div className="bg-[#f1f4f3] dark:bg-[#2a322c] rounded-lg border border-slate-200 dark:border-[#343d37] overflow-hidden">
+      <div className="bg-[#f1f4f3]/50 dark:bg-[#2a322c]/60 rounded-lg border border-slate-200 dark:border-[#343d37] overflow-hidden">
         {items.map((item, index) => (
           <AccordionItem
             key={index}

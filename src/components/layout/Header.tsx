@@ -22,7 +22,7 @@ const Header: React.FC = () => {
               <div className="h-8 w-8 text-slate-900 dark:text-white transition-all duration-300 group-hover:scale-105 group-hover:text-primary">
                 <Logo />
               </div>
-              <span className="text-xl tracking-tight text-slate-900 dark:text-white hidden sm:block duration-300 group-hover:text-primary">
+              <span className="text-xl tracking-tight text-slate-900 dark:text-white duration-300 group-hover:text-primary">
                 Ben Weltman
               </span>
             </Link>
