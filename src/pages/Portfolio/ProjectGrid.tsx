@@ -6,9 +6,9 @@ import PageWrapper from '../../components/layout/PageWrapper';
 
 const categories = [
   { label: 'Show All', value: 'All' },
-  { label: 'SaaS & Web Apps', value: 'SaaS & Web Apps' },
-  { label: 'Design Systems & UI Architecture', value: 'Design Systems & UI Architecture' },
   { label: 'Bespoke Websites & Portfolios', value: 'Bespoke Websites & Portfolios' },
+  { label: 'Design Systems & UI Architecture', value: 'Design Systems & UI Architecture' },
+  { label: 'SaaS & Web Apps', value: 'SaaS & Web Apps' },
 ];
 
 const ProjectGrid: React.FC = () => {
@@ -36,7 +36,7 @@ const ProjectGrid: React.FC = () => {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
               filter === cat.value
                 ? 'bg-primary text-white shadow-lg scale-105'
-                : 'bg-[#f1f4f3] dark:bg-[#2a322c] hover:bg-[#dbe3e0] dark:hover:bg-[#353d37]'
+                : 'bg-[#f1f4f3]/50 dark:bg-[#2a322c]/60 hover:bg-[#dbe3e0] dark:hover:bg-[#353d37]'
             }`}
           >
             {cat.label}
@@ -61,7 +61,7 @@ const ProjectGrid: React.FC = () => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-lg bg-[#f1f4f3] dark:bg-[#2a322c] border border-slate-200 dark:border-[#2a322c] hover:border-primary transition-colors cursor-pointer block"
+              className="group relative overflow-hidden rounded-lg bg-[#f1f4f3]/50 dark:bg-[#2a322c]/60 border border-slate-200 dark:border-[#2a322c] hover:border-primary transition-colors cursor-pointer block"
             >
               <div className="aspect-video overflow-hidden">
                 <img

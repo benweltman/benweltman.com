@@ -7,10 +7,9 @@ import ParticleBackground from '../../components/common/ParticleBackground';
 const HomePage: React.FC = () => {
   return (
     <>
+      <ParticleBackground />
       {/* Hero Section - Outside PageWrapper for full width */}
       <section className="relative min-h-[80vh] flex items-center justify-center text-center px-4 overflow-hidden">
-        <ParticleBackground />
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,7 +67,7 @@ const HomePage: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
-              className="p-8 rounded-lg bg-[#f1f4f3] dark:bg-[#2a322c] border border-slate-200 dark:border-[#2a322c] hover:border-primary transition-colors group"
+              className="p-8 rounded-lg bg-[#f1f4f3]/50 dark:bg-[#2a322c]/60 border border-slate-200 dark:border-[#2a322c] hover:border-primary transition-colors group backdrop-blur-sm z-10"
             >
               <span className="material-symbols-outlined text-4xl mb-4 block text-primary">{feature.icon}</span>
               <h3 className="text-2xl font-normal mb-3 group-hover:text-primary transition-colors">{feature.title}</h3>
